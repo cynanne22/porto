@@ -126,7 +126,11 @@ body {
 }
 
 .home-img img {
-    max-width: 400px;
+    max-width: 400px; /* DIUBAH */
+    max-height: 400px; /* DITAMBAH */
+    width: 100%; /* DITAMBAH */
+    aspect-ratio: 1 / 1; /* DITAMBAH: Memaksa rasio 1:1 */
+    object-fit: cover; /* DITAMBAH: Memastikan gambar mengisi area */
     border-radius: 50%;
     border: 8px solid #F5B0CB; /* Pink border */
 }
@@ -145,9 +149,10 @@ body {
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 }
 
 .project-card {
@@ -156,6 +161,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 320px;
 }
 
 .project-card:hover {
@@ -243,6 +249,23 @@ body {
     color: #5C5470;
 }
 
+/* DITAMBAH: Style untuk tombol ikon kontak */
+.contact-links .btn {
+    width: 55px; /* Lebar tombol */
+    height: 55px; /* Tinggi tombol */
+    padding: 0; /* Hapus padding lama */
+    border-radius: 50%; /* Membuat tombol menjadi bulat */
+    display: inline-flex; /* Agar ikon bisa ditengahkan */
+    align-items: center; /* Menengahkan ikon secara vertikal */
+    justify-content: center; /* Menengahkan ikon secara horizontal */
+}
+
+/* DITAMBAH: Style untuk ikon di dalam tombol kontak */
+.contact-links .btn i {
+    font-size: 1.7rem; /* Ukuran ikon */
+}
+
+
 /* ===== FOOTER ===== */
 .footer {
     text-align: center;
@@ -263,6 +286,7 @@ body {
     }
     .home-img img {
         max-width: 250px;
+        max-height: 250px; /* Sesuaikan untuk responsif */
     }
     .home-content h1 {
         font-size: 2.5rem;
