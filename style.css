@@ -103,6 +103,11 @@ body {
     padding: 0 10%;
 }
 
+.home-content .btn {
+    margin-right: 15px; /* Adds space between buttons */
+    margin-bottom: 15px; /* Ensures space below for responsive stacking */
+}
+
 .home-content {
     max-width: 50%;
 }
@@ -195,11 +200,14 @@ body {
 }
 
 .skill-category {
-    background: #FEEAFA; /* Very light pink background */
+    background: #FEEAFA;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .skill-category h4 {
